@@ -2,6 +2,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:sample_flutter_app/screens/ticket_view.dart';
 import 'package:sample_flutter_app/utils/app_styles.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -64,6 +65,17 @@ class HomeScreen extends StatelessWidget {
                         child: Text("View all",style: Styles.textStyle.copyWith(color: Styles.primaryColor),))
                   ],
                 )
+              ],
+            ),
+          ),
+          const Gap(15),
+          SingleChildScrollView(
+            padding: const EdgeInsets.only(left: 20),
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                TicketView(),
+                TicketView()
               ],
             ),
           )
